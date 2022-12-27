@@ -1,4 +1,4 @@
-$grid-color: blue;
+$grid-color: orange;
 
 .wrapper {
   background-color: black;
