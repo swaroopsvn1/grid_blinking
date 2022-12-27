@@ -7,7 +7,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit, AfterViewInit{
   title = 'grid-blinking';
-  heading = "Kubernetes Deployment"
+  heading = "Heading"
   gridList:any = [];
   gridCount = 84;
   ngOnInit(): void {
