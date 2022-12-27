@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <div class="header">
+    <h1>{{heading}}</h1>
+  </div>
+  <div class="flex">
+    <div *ngFor="let item of gridList; let i = index" [ngClass]="'flex_item flex_item' + i " [id]="'flex_item' + i"></div> 
+  </div>
+</div>

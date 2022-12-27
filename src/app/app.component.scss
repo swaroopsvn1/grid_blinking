@@ -1,0 +1,64 @@
+$grid-color: orange;
+
+.wrapper {
+  background-color: black;
+  width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  margin: 0;
+  h1 {
+    margin: 0;
+    color: $grid-color;
+    font-size: 4rem;
+  }
+}
+.flex {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 100px;
+  &_item {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(32, 32, 32);
+  }
+}
+.animation-blink {
+  animation-name: blink;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.animation-blink-reverse {
+  background-color: $grid-color;
+  animation-name: blink;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+  45% {
+    background-color: rgb(32, 32, 32);
+  }
+  50% {
+    background-color: $grid-color;
+  }
+  55% {
+    background-color: rgb(32, 32, 32);
+  }
+}
+@keyframes blink-reverse {
+  45% {
+    background-color: $grid-color;
+  }
+  50% {
+    background-color: rgb(32, 32, 32);
+  }
+  55% {
+    background-color: $grid-color;
+  }
+}
