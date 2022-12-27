@@ -1,4 +1,5 @@
-FROM lolhens/baseimage-openjre
-ADD target/springbootApp.jar springbootApp.jar
-EXPOSE 8085
-ENTRYPOINT ["java", "-jar", "springbootApp.jar"]
+FROM centos:latest
+RUN yum -y install httpd
+COPY ./dist/grid-blinking/  /var/www/html/
+CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+EXPOSE 80

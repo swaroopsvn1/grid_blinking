@@ -1,5 +1,7 @@
-FROM centos:latest
-RUN yum -y install httpd
+FROM ubuntu 
+RUN apt update 
+RUN apt install –y apache2 
+RUN apt install –y apache2-utils 
 COPY ./dist/grid-blinking/  /var/www/html/
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+CMD [“apache2ctl”, “-D”, “FOREGROUND”]
 EXPOSE 80
